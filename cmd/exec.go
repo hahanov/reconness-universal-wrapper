@@ -46,7 +46,7 @@ var cmdExec = &cobra.Command{
 		}
 
 		conf = readConfig() //read the config
-
+		conf.server = "http://" + conf.server
 		args := strings.Fields(arguments[0]) //split the argument given
 
 		for i, arg := range args { //get JWT and subdomains
